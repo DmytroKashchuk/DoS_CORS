@@ -1,6 +1,8 @@
-# # Cache Poisoning Process
+# Denial of Service through Cache Poisoning and Misconfigured CORS Origins
 
 This repository is strongly linked to the repo [link]. The script `doscors.py` checks whether sites that using CORS (Cross-Origin Resource Sharing) can be vulnerable to a Denial of Service (DoS) attack exploiting the Same-Origin Policy (SOP).
+
+The project investigates a particular form of Denial of Service (DoS) attack that arises from cache poisoning, caused by misconfigured Cross-Origin Resource Sharing (CORS) origins. In this scenario, an attacker manipulates a web application's cache by inserting malicious content or directives. The misconfigured CORS origins further allow this poisoned cache to be served to genuine users. When users attempt to access the resources, the Single Origin Policy (SOP) blocks the request due to the malicious CORS headers in the poisoned cache, thereby denying service.
 
 The cache poisoning process encompasses the following steps:
 
